@@ -3,17 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
     <title>Mindful</title>
   </head>
   <body>
-    <header>
-      <h1>Mindful</h1>
-    </header>
     <main>
-      <p>Welcome to Mindful.</p>
+      <p class="bona-nova-regular">Next MindFUL Day comes...</p>
+      <p id="countdown" class="bona-nova-bold">some time</p>
     </main>
-    <footer>
+    <footer class="bona-nova-regular-italic">
       <p>&copy; 2026</p>
     </footer>
+    <script>
+      const futureDate = new Date(2027, 2, 5);
+
+      function updateCountdown(targetDate, currentDate = new Date()) {
+        const currentDay = Date.UTC(
+          currentDate.getFullYear(),
+          currentDate.getMonth(),
+          currentDate.getDate()
+        );
+        const targetDay = Date.UTC(
+          targetDate.getFullYear(),
+          targetDate.getMonth(),
+          targetDate.getDate()
+        );
+        const daysRemaining = (targetDay - currentDay) / 86400000;
+
+        document.getElementById("countdown").textContent =
+          daysRemaining < 0
+            ? "The date has passed."
+            : daysRemaining === 0
+              ? "Now!"
+              : `in ${daysRemaining} ${daysRemaining === 1 ? "day" : "days"}.`;
+      }
+
+      updateCountdown(futureDate);
+    </script>
   </body>
 </html>

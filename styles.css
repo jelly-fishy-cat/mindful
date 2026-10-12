@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:  linear-gradient(to bottom, #073b4c, #118ab2) ;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #06D6A0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+footer {
+    color: white;
+}
+
+.bona-nova-regular {
+  font-family: "Bona Nova", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bona-nova-bold {
+  font-family: "Bona Nova", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.bona-nova-regular-italic {
+  font-family: "Bona Nova", serif;
+  font-weight: 400;
+  font-style: italic;
+}
